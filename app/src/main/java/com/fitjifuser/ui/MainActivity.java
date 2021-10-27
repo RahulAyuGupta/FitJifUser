@@ -1,8 +1,10 @@
-package com.fitjifuser;
+package com.fitjifuser.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.fitjifuser.R;
 
 public class MainActivity extends AppCompatActivity {
 
