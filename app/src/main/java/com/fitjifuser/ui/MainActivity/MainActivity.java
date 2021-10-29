@@ -15,6 +15,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.fitjifuser.R;
@@ -56,9 +58,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setSupportActionBar(toolbar);
         actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            getWindow().setStatusBarColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
-            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+        if (Build.VERSION.SDK_INT >= 21) {
+            Window window = this.getWindow();
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(ContextCompat.getColor(this, R.color.black));
         }
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,8 +85,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         menu_option = navigationView.getMenu();
         try {
             View headerLayout =navigationView.getHeaderView(0);
-            //userNameTV = (TextView)headerLayout.findViewById(R.id.userNameTV);
+            TextView textView = (TextView)headerLayout.findViewById(R.id.textView);
             //userImageView=(CircleImageView)headerLayout.findViewById(R.id.userImageView);
+            textView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent i1 = new Intent(MainActivity.this, MyProfileActivity.class);
+                    i1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(i1);
+                }
+            });
 
 
             getSupportFragmentManager().addOnBackStackChangedListener(new FragmentManager.OnBackStackChangedListener() {
@@ -183,9 +195,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
          }
          else if(id ==R.id.nav_security){
-             Intent i1 = new Intent(MainActivity.this, MyProfileActivity.class);
-             i1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-             startActivity(i1);
+
 
          }
 

@@ -8,30 +8,64 @@
             android:id="@+id/nav_my_workouts"
             android:icon="@drawable/myorders2"
             android:title="My Workouts" />
+
+        <group
+    android:id="@+id/group_item_2"
+    android:checkableBehavior="single">
         <item
             android:id="@+id/nav_history"
             android:icon="@drawable/history2"
             android:title="History" />
+    </group>
+    <group
+        android:id="@+id/group_item_3"
+        android:checkableBehavior="single">
         <item
             android:id="@+id/nav_notifications"
             android:icon="@drawable/notification2"
             android:title="Notifications" />
+    </group>
+    <group
+        android:id="@+id/group_item_4"
+        android:checkableBehavior="single">
         <item
             android:id="@+id/nav_settings"
             android:icon="@drawable/setting2"
             android:title="Settings" />
+    </group>
+    <group
+        android:id="@+id/group_item_5"
+        android:checkableBehavior="single">
         <item
             android:id="@+id/nav_help"
             android:icon="@drawable/help2"
             android:title="Help" />
+    </group>
+    <group
+        android:id="@+id/group_item_6"
+        android:checkableBehavior="single">
         <item
             android:id="@+id/nav_security"
             android:icon="@drawable/securityprivacy2"
             android:title="Security &amp; Privacy" />
+    </group>
+    <group
+        android:id="@+id/group_item_7"
+        android:checkableBehavior="single">
 
         <item
             android:id="@+id/nav_logout"
             android:icon="@drawable/logout2"
             android:title="Logout" />
+    </group>
+        <group
+            android:id="@+id/group_item_8"
+            android:checkableBehavior="single">
+
+            <item
+                android:id="@+id/nav_l"
+                android:title="" />
+        </group>
+
     </group>
 </menu>
