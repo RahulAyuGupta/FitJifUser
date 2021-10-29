@@ -40,6 +40,16 @@
     <string name="action_Cart">Cart</string>
     <string name="username">User Name</string>
     <string name="currentpassword">Current Password</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+    <string name="title_activity_main2">MainActivity</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="strength">Strength &amp; Conditioning</string>
+    <string name="boxing">Boxing &amp; Kickboxing</string>
 
 
 </resources>

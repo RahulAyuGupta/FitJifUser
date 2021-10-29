@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_my_workouts"
+            android:icon="@drawable/myorders2"
+            android:title="My Workouts" />
+        <item
+            android:id="@+id/nav_history"
+            android:icon="@drawable/history2"
+            android:title="History" />
+        <item
+            android:id="@+id/nav_notifications"
+            android:icon="@drawable/notification2"
+            android:title="Notifications" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/setting2"
+            android:title="Settings" />
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/help2"
+            android:title="Help" />
+        <item
+            android:id="@+id/nav_security"
+            android:icon="@drawable/securityprivacy2"
+            android:title="Security &amp; Privacy" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/logout2"
+            android:title="Logout" />
+    </group>
+</menu>
