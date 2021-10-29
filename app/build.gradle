@@ -7,7 +7,7 @@ android {
 
     defaultConfig {
         applicationId "com.fitjifuser"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -46,17 +46,16 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.makeramen:roundedimageview:2.3.0'
-    implementation 'com.squareup.picasso:picasso:2.3.2'
     implementation 'org.jsoup:jsoup:1.10.2'
-    implementation 'com.nineoldandroids:library:2.4.0'
-    implementation 'com.daimajia.slider:library:1.1.5@aar'
-    implementation 'com.facebook.shimmer:shimmer:0.4.0'
-    implementation 'com.github.sujithkanna:smileyrating:1.6.8'
-    implementation 'com.google.android.gms:play-services-places:16.0.0'
-    implementation 'com.google.android.libraries.places:places:1.0.0'
-    implementation 'com.google.android.gms:play-services-location:16.0.0'
-    implementation 'com.google.android.gms:play-services-maps:16.0.0'
-    implementation 'com.karumi:dexter:4.2.0'
+    //implementation 'com.nineoldandroids:library:2.4.0'
+    //implementation 'com.daimajia.slider:library:1.1.5@aar'
+    //implementation 'com.facebook.shimmer:shimmer:0.4.0'
+    //implementation 'com.github.sujithkanna:smileyrating:1.6.8'
+    //implementation 'com.google.android.gms:play-services-places:16.0.0'
+    //implementation 'com.google.android.libraries.places:places:1.0.0'
+    //implementation 'com.google.android.gms:play-services-location:16.0.0'
+    //implementation 'com.google.android.gms:play-services-maps:16.0.0'
+    //implementation 'com.karumi:dexter:4.2.0'
 
 
 

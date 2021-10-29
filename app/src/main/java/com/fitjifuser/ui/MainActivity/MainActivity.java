@@ -18,7 +18,9 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.fitjifuser.R;
+import com.fitjifuser.ui.History.HistoryActivity;
 import com.fitjifuser.ui.MyProfile.MyProfileActivity;
+import com.fitjifuser.ui.MyWorkout.MyWorkoutActivity;
 import com.fitjifuser.ui.Notification.NotificationActivity;
 import com.fitjifuser.ui.Setting.SettingActivity;
 import com.google.android.material.navigation.NavigationView;
@@ -169,6 +171,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
          }
 
          else if(id ==R.id.nav_history){
+             Intent i1 = new Intent(MainActivity.this, HistoryActivity.class);
+             i1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+             startActivity(i1);
+
+         }
+         else if(id ==R.id.nav_my_workouts){
+             Intent i1 = new Intent(MainActivity.this, MyWorkoutActivity.class);
+             i1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+             startActivity(i1);
+
+         }
+         else if(id ==R.id.nav_security){
              Intent i1 = new Intent(MainActivity.this, MyProfileActivity.class);
              i1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
              startActivity(i1);

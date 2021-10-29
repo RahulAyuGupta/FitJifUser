@@ -1,4 +1,4 @@
-package com.fitjifuser.ui.Setting;
+package com.fitjifuser.ui.History;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,16 +17,18 @@ import android.widget.TextView;
 
 import com.fitjifuser.R;
 import com.fitjifuser.ui.ChangePassword.ChangePasswordActivity;
+import com.fitjifuser.ui.Setting.SettingActivity;
 
-public class SettingActivity extends AppCompatActivity {
+public class HistoryActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
     private ActionBar actionBar;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_setting);
+        setContentView(R.layout.activity_history);
         if (Build.VERSION.SDK_INT >= 21) {
             Window window = this.getWindow();
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
@@ -35,25 +37,17 @@ public class SettingActivity extends AppCompatActivity {
         }
 
 
-        toolbar = (Toolbar)findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         setupActionBar();
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
+            public void onClick(View v) {
                 onBackPressed();
             }
         });
 
-        findViewById(R.id.changePasswordLayout).setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View arg0) {
-                        Intent in = new Intent(SettingActivity.this, ChangePasswordActivity.class);
-                        in.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                        startActivity(in);
-                    }
-                });
+
     }
 
 
@@ -72,14 +66,12 @@ public class SettingActivity extends AppCompatActivity {
         LayoutInflater inflator = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View v = inflator.inflate(R.layout.title_bar_view, null);
         TextView header = (TextView) v.findViewById(R.id.title_txt);
-        header.setText("Setting");
-        actionBar.setCustomView(v,param);
+        header.setText("History");
+        actionBar.setCustomView(v, param);
     }
 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
     }
-
-
 }

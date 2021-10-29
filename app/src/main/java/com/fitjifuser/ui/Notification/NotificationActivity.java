@@ -58,7 +58,7 @@ public class NotificationActivity extends AppCompatActivity {
         LayoutInflater inflator = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View v = inflator.inflate(R.layout.title_bar_view, null);
         TextView header = (TextView) v.findViewById(R.id.title_txt);
-        header.setText("com/fitjifuser/ui/Notification");
+        header.setText("Notification");
         actionBar.setCustomView(v, param);
     }
 

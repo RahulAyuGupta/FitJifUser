@@ -58,7 +58,7 @@
                         android:layout_centerInParent="true"
                         android:layout_marginTop="@dimen/margin_20dp"
                         android:layout_marginBottom="@dimen/margin_20dp"
-                        android:src="@drawable/image1"
+                        android:src="@drawable/no"
                         app:civ_border_color="@color/purple_500"
                         app:civ_border_width="4dp" />
 
