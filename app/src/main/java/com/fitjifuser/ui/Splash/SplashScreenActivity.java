@@ -7,6 +7,7 @@ import android.os.Handler;
 
 import com.fitjifuser.R;
 import com.fitjifuser.ui.MyWorkout.MyWorkoutActivity;
+import com.fitjifuser.ui.OnBording.WelcomeBroadingActivity;
 
 public class SplashScreenActivity extends Activity {
 
@@ -20,7 +21,7 @@ public class SplashScreenActivity extends Activity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent in = new Intent(SplashScreenActivity.this, MyWorkoutActivity.class);
+                Intent in = new Intent(SplashScreenActivity.this, WelcomeBroadingActivity.class);
                 in.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(in);
                 finish();
